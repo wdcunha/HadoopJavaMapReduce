@@ -1,0 +1,23 @@
+javac -classpath ./Resources/hadoop-core-1.2.1.jar -d build/ map/reduce/*
+
+
+jar -cvf executavel.jar -C build/ .
+
+hadoop jar executavel.jar map.reduce.WordCount /Users/wdcunha/ESTG/2osemestre/Anal.Dados/datasets/Airplane_Crashes_and_Fatalities_Since_1908.csv /output/outputWC
+hadoop jar executavel.jar map.reduce.WordCount /home/Airplane_Crashes_and_Fatalities_Since_1908.csv /output/outputWC
+hadoop jar executavel.jar map.reduce.SalesProductWA /home/WA_Sales_Products_2012-14.csv /output/outputSales
+hadoop jar executavel.jar map.reduce.SalesProductYearWA /home/WA_Sales_Products_2012-14.csv /output/outputSalesYear
+hadoop jar executavel.jar map.reduce.SalesAvgPriceWA /home/WA_Sales_Products_2012-14.csv /output/outputSalesAvg
+
+*** todos dentro de src no terminal
+
+ hadoop fs -cat /output/outputWC/part-r-00000
+
+ hadoop fs -get /output/outputWC /data/db/
+ hadoop fs -get /output/outputSales /data/db/
+ hadoop fs -get /output/outputSalesYear /data/db/
+ hadoop fs -get /output/outputSalesAvg /data/db/
+
+Error about the header line:
+Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+java.lang.NumberFormatException: For input string: "Revenue"

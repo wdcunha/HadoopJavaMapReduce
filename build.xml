@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="compile">
+    
+	<target name="clean">
+        <delete dir="Resources/bin"/>
+    </target>
+	
+	<target name="compile">
+        <mkdir dir="Resources/bin"/>
+        <javac srcdir="src" destdir="Resources/bin" includeantruntime="true"/>
+    </target>
+		
+	<target name="jar">
+	    <jar destfile="src/executavel.jar" basedir="Resources/bin/">
+	    </jar>
+	</target>
+
+	<target name="all" depends="clean, compile, jar"></target>
+
+</project>
+

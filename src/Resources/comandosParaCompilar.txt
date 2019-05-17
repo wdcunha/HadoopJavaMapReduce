@@ -7,7 +7,7 @@ hadoop jar executavel.jar map.reduce.WordCount /Users/wdcunha/ESTG/2osemestre/An
 hadoop jar executavel.jar map.reduce.WordCount /home/Airplane_Crashes_and_Fatalities_Since_1908.csv /output/outputWC
 hadoop jar executavel.jar map.reduce.SalesProductWA /home/WA_Sales_Products_2012-14.csv /output/outputSales
 hadoop jar executavel.jar map.reduce.SalesProductYearWA /home/WA_Sales_Products_2012-14.csv /output/outputSalesYear
-hadoop jar executavel.jar map.reduce.SalesAvgPriceWA /home/WA_Sales_Products_2012-14.csv /output/outputSalesAvg
+hadoop jar executavel.jar map.reduce.SalesAvgPriceWA /input/WA_Sales_Products_2012-14.csv /output/outputSalesAvg
 
 *** todos dentro de src no terminal
 
@@ -17,6 +17,7 @@ hadoop jar executavel.jar map.reduce.SalesAvgPriceWA /home/WA_Sales_Products_201
  hadoop fs -get /output/outputSales /data/db/
  hadoop fs -get /output/outputSalesYear /data/db/
  hadoop fs -get /output/outputSalesAvg /data/db/
+ hadoop fs -get /output/outputSalesAvg2 /data/db/
 
 Error about the header line:
 Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer

@@ -14,9 +14,10 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import java.io.IOException;
 
 /**
- * 2.3. precoMedioPais – Qual o preço médio dos produtos vendidos em cada país?
+ * 2.4. precoMedioProdutoPais – Qual o preço médio de cada produto, em cada país? Apresente os resultados
+ * ordenados por produto
  */
-public class SalesAvgPriceWA {
+public class SalesAvgPriceProductWA {
 
     public class WASalesData {
 
@@ -37,26 +38,25 @@ public class SalesAvgPriceWA {
         //      United States,Fax,Outdoors Shop,Camping Equipment,Cooking Gear,TrailChef Deluxe Cook Set,2012,Q1 2012,59628.66,489,0.34754797
 
     }
-    /** 2.3. precoMedioPais – Qual o preço médio dos produtos vendidos em cada país? */
+    /** 2.4. precoMedioProdutoPais – Qual o preço médio de cada produto, em cada país? Apresente os resultados ordenados por produto */
 
-    public static class SalesAvgCountryMapper
-            extends Mapper<LongWritable, Text, Text, Text> {
+    public static class SalesCountryAvgProductMapper
+            extends Mapper<Object, Text, Text, Text> {
 
         @Override
-        public void map(LongWritable key, Text value, Context context)
+        public void map(Object key, Text value, Context context)
                 throws IOException, InterruptedException {
 
             String[] parts = value.toString().split(",");
 
-                context.write(new Text(parts[SalesProductWA.WASalesData.retailer_country_ind]), new Text(parts[SalesProductWA.WASalesData.revenue_ind]
-                        + "," + parts[SalesProductYearWA.WASalesData.quantity_ind]));
-
+                context.write(new Text(parts[WASalesData.retailer_country_ind] + ", " + parts[WASalesData.product_ind]+","), new Text(parts[WASalesData.revenue_ind]
+                              + "," + parts[WASalesData.quantity_ind]));
         }
     }
 
-    /** 2.3. precoMedioPais – Qual o preço médio dos produtos vendidos em cada país? */
+    /** 2.4. precoMedioProdutoPais – Qual o preço médio de cada produto, em cada país? Apresente os resultados ordenados por produto */
 
-    public static class SalesAvgCountryReducer
+    public static class SalesCountryAvgProductReducer
             extends Reducer<Text, Text, Text, FloatWritable> {
 
             @Override
@@ -64,7 +64,7 @@ public class SalesAvgPriceWA {
                 throws IOException, InterruptedException {
 
                 float sumRevenue = 0;
-                int countQty = 0;
+                float countQty = 0;
 
                 for (Text val : values) {
 
@@ -75,11 +75,6 @@ public class SalesAvgPriceWA {
                         try {
                             float revenue = Float.parseFloat(parts[0]);
                             float qty = Float.parseFloat(parts[1]);
-
-//                            Solution used initially for me
-//                            float unit = revenue/qty;
-//                            sumRevenue += unit;
-//                            countQty += 1;
 
                             sumRevenue += revenue;
                             countQty += qty;
@@ -98,9 +93,10 @@ public class SalesAvgPriceWA {
         Configuration conf = new Configuration();
 
         Job jobSaleTotal =  Job.getInstance(conf,"product average");
-        jobSaleTotal.setJarByClass(SalesAvgPriceWA.class);
-        jobSaleTotal.setMapperClass(SalesAvgCountryMapper.class);
-        jobSaleTotal.setReducerClass(SalesAvgCountryReducer.class);
+
+        jobSaleTotal.setJarByClass(SalesAvgPriceProductWA.class);
+        jobSaleTotal.setMapperClass(SalesCountryAvgProductMapper.class);
+        jobSaleTotal.setReducerClass(SalesCountryAvgProductReducer.class);
         jobSaleTotal.setMapOutputKeyClass(Text.class);
         jobSaleTotal.setMapOutputValueClass(Text.class);
         jobSaleTotal.setOutputKeyClass(Text.class);

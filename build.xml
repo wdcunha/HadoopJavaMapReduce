@@ -2,11 +2,11 @@
 <project default="compile">
     
 	<target name="clean">
-        <delete dir="Resources/bin"/>
+        <delete dir="src/bin"/>
     </target>
 	
 	<target name="compile">
-        <mkdir dir="Resources/bin"/>
+        <mkdir dir="src"/>
         <javac srcdir="src" destdir="Resources/bin" includeantruntime="true"/>
     </target>
 		

@@ -1,17 +1,16 @@
 
-wsquid:S00115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰ß³™øÿÿÿÿ
-wsquid:S00115 "ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Æ¡Ï·üÿÿÿÿ
-rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÜŞ¡ 
-rsquid:S00115""ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(õå¡ã
-wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¦æ§øÿÿÿÿ
-rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(èŸÎ
-rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(´¥¾š
-wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ş«ÂÌûÿÿÿÿ
-?squid:S11489"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ö×óÛ
-Wsquid:UselessImportCheck"3Remove this unused import 'java.math.RoundingMode'.(¿ì†‹
-rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÁıĞ¿
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(öğ°şÿÿÿÿ
-Xsquid:UselessImportCheck"4Remove this unused import 'java.text.DecimalFormat'.(¤°Ó˜
-rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(È¥•˜
-Rsquid:S3518Y";Make sure "count" can't be zero before doing this division.(‚şŞæ
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(öğ°şÿÿÿÿ
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Æ¡Ï·üÿÿÿÿ
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(èŸÎ
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ş«ÂÌûÿÿÿÿ
+nsquid:CommentedOutCodeLineP"<This block of commented-out lines of code should be removed.(’¹™Øûÿÿÿÿ8ìÚÎª¬-
+Msquid:S00108W")Either remove or fill this block of code.(¿åÓúÿÿÿÿ8ìÚÎª¬-
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÜŞ¡ 
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(È¥•˜
+rsquid:S00115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(õå¡ã
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¦æ§øÿÿÿÿ
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÁıĞ¿
+\squid:S3518[">Make sure "countQty" can't be zero before doing this division.(Í‚€8ìÚÎª¬-
+wsquid:S00115 "ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰ß³™øÿÿÿÿ
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(´¥¾š
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ö×óÛ

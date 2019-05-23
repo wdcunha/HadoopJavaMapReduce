@@ -16,7 +16,7 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 /**
- * 3.2. totalVendasAnoPais – Qual o total de vendas por ano em cada país?
+ * 2.2. totalVendasAnoPais – Qual o total de vendas por ano em cada país?
  */
 public class SalesProductYearWA {
 

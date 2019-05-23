@@ -8,16 +8,25 @@ hadoop jar executavel.jar map.reduce.WordCount /home/Airplane_Crashes_and_Fatali
 hadoop jar executavel.jar map.reduce.SalesProductWA /home/WA_Sales_Products_2012-14.csv /output/outputSales
 hadoop jar executavel.jar map.reduce.SalesProductYearWA /home/WA_Sales_Products_2012-14.csv /output/outputSalesYear
 hadoop jar executavel.jar map.reduce.SalesAvgPriceWA /input/WA_Sales_Products_2012-14.csv /output/outputSalesAvg
+hadoop jar executavel.jar map.reduce.SalesAvgPriceProductWA /input/WA_Sales_Products_2012-14.csv /output/SalesAvgPriceProductWA
+hadoop jar executavel.jar map.reduce.SalesAvgPriceExpensiveProductWA /input/part-r-00000.csv /output/SalesAvgPriceExpensiveProductWA
 
 *** todos dentro de src no terminal
 
  hadoop fs -cat /output/outputWC/part-r-00000
+ hadoop fs -put part-r-00000 /input
 
  hadoop fs -get /output/outputWC /data/db/
  hadoop fs -get /output/outputSales /data/db/
  hadoop fs -get /output/outputSalesYear /data/db/
  hadoop fs -get /output/outputSalesAvg /data/db/
  hadoop fs -get /output/outputSalesAvg2 /data/db/
+ hadoop fs -get /output/SalesAvgPriceProductWA /data/db/
+ hadoop fs -get /output/SalesAvgPriceExpensiveProductWA /data/db/
+
+
+
+
 
 Error about the header line:
 Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer

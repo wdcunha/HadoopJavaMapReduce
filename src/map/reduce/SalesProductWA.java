@@ -13,7 +13,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import java.io.IOException;
 
 /**
- * 3.1. totalVendasAno - Qual o total de vendas por país durante os 3 anos?
+ * 2.1. totalVendasAno - Qual o total de vendas por país durante os 3 anos?
  */
 public class SalesProductWA {
 
